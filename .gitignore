@@ -1,0 +1,9 @@
+memo.py
+train.py
+__pycache__
+
+data/*
+data_/
+result/*
+
+git.sh
