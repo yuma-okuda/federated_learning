@@ -11,7 +11,7 @@ if __name__ == "__main__":
     client = Client(rank, args)
     for i in range(args.round):
         p = Process(target=init_process, args=(
-            rank, args.size, client.main))  # ローカルモデルからグローバルモデルの生成
+            rank, args.world_size, client.main))  # ローカルモデルからグローバルモデルの生成
         p.start()
         processes.append(p)
         for p in processes:
