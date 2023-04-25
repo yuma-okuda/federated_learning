@@ -25,7 +25,7 @@ def run_all_gather(rank, size):
 
 def init_process(rank, size, fn, backend='gloo'):
     """ Initialize the distributed environment. """
-    os.environ['MASTER_ADDR'] = 'localhost'
+    os.environ['MASTER_ADDR'] = '10.24.30.12'
     os.environ['MASTER_PORT'] = '29500'
     dist.init_process_group(backend, rank=rank, world_size=size)
     fn(rank, size)
